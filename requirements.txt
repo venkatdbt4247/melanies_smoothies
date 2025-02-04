@@ -3,3 +3,4 @@ snowflake-snowpark-python
 snowflake-connector-python==3.9
 streamlit
 requests
+pandas
