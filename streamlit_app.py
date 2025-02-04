@@ -3,18 +3,13 @@ import streamlit as st
 from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 import requests
+import pandas
 
 
 
 # Write directly to the app
+st.title(":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
 st.title("Customize Your Smoothie")
-st.write(
-    """Replace this example with your own code!
-    **And if you're new to st,** check
-    out our easy-to-follow guides at
-    [docs.st.io](https://docs.st.io).
-    """
-)
 
 name_on_order = st.text_input ("Name on Smoothie:")
 cnx = st.connection( "snowflake")
@@ -25,8 +20,8 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 # st.stop
 
 pd_df=my_dataframe.to_pandas()
-st.dataframe(pd_df)
-#st.stop()
+# st.dataframe(pd_df)
+# st.stop()
 
 ingredients_list = st.multiselect (
     'Choose upto 5 ingredients:'
@@ -56,5 +51,4 @@ if ingredients_list:
         if time_to_insert:
             session.sql(my_insert_stmt).collect()
             st.success("Your Smoothie is ordered!")
-            st.write(my_insert_stmt)
-            st.write(ingredients_string)
+            
