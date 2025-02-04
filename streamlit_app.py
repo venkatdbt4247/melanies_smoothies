@@ -4,7 +4,7 @@ from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
-streamlit.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
+streamlit.title("Customize Your Smoothie")
 streamlit.write(
     """Replace this example with your own code!
     **And if you're new to st,** check
