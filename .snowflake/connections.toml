@@ -1,4 +1,4 @@
-[snowflake]
+[connections.snowflake]
 account="TOGEXEZ-MX28295"
 user="RAYALAVENKAT4247"
 password="TrainSelf8998"
