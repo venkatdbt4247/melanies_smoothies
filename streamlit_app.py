@@ -14,7 +14,7 @@ streamlit.write(
 )
 
 name_on_order = streamlit.text_input ("Name on Smoothie:")
-cnx = streamlit.connection("snowflake")
+cnx = streamlit.connection("snowflake", type = "snowflake")
 
 session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
