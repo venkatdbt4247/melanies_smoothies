@@ -2,7 +2,7 @@
 [connection.snowflake]
 account="TOGEXEZ-MX28295"
 user="RAYALAVENKAT4247"
-password="TrainSelf8998"
+password="Authority8998"
 role="SYSADMIN"
 warehouse="COMPUTE_WH"
 database="SMOOTHIES"
